@@ -1,0 +1,136 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/blueTwitter</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/blueTwitter</item>
+        <item name="colorControlNormal">@color/grayLight</item>
+        <!--        <item name="android:windowDisablePreview">true</item>-->
+        <item name="preferenceTheme">@style/AppTheme.PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="PostBackground">
+        <item name="android:background">@color/primaryBackground</item>
+    </style>
+
+    <style name="PostUserName">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="PostTitle">
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="PostText">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SearchUserUnfocused">
+        <!--        <item name="background">@drawable/search_user_selector</item>-->
+        <item name="android:layout_marginStart">10dp</item>
+    </style>
+
+    <style name="SearchUserFocused">
+        <!--        <item name="background">@drawable/layout_bg_login_register</item>-->
+        <item name="android:layout_marginStart">30dp</item>
+    </style>
+
+    <style name="ProfileDetailEditButtonEditProfile" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/grayLight</item>
+        <item name="android:textSize">14sp</item>
+        <item name="backgroundTint">@color/primaryBackground</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="strokeColor">@color/grayLight</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="ProfileDetailEditButtonFollow" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/blueGray</item>
+        <item name="android:textSize">14sp</item>
+        <item name="backgroundTint">@color/blueTwitter</item>
+    </style>
+
+    <style name="AuthTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/text_input_box_stroke</item>
+        <item name="hintTextColor">@color/text_input_text_hint</item>
+        <item name="android:textColorHint">@color/text_input_text_hint</item>
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="NotifyNewPosts" parent="Widget.AppCompat.TextView">
+        <item name="android:drawableLeft">@drawable/ic_arrow_up_thick</item>
+        <item name="drawableTint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/notify_corner_radius</item>
+        <item name="drawableSize">8dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:drawablePadding">5dp</item>
+    </style>
+
+    <style name="EditTextAppCompatProfileEdit" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/grayLight</item>
+        <item name="colorControlActivated">@color/blueTwitter</item>
+        <item name="colorControlHighlight">@color/blueTwitter</item>
+
+        <item name="android:textColorHint">@color/grayLightText</item>
+    </style>
+
+    <style name="SpinnerThemeReport">
+        <item name="background">@color/primaryBackground</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:spinnerMode">dialog</item>
+        <item name="android:popupBackground">@color/primaryBackground</item>
+        <item name="android:layout_marginStart">5dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+
+    <style name="Toolbar.Button.Navigation.Tinted" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowBackground">@color/yellow</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+    </style>
+
+    <style name="AppTheme.PreferenceThemeOverlay" parent="@style/PreferenceThemeOverlay">
+        <item name="android:colorBackground">@color/primaryBackground</item>
+    </style>
+
+    <style name="Settings.MaterialDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorSurface">@color/primaryText</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialogTitle</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialogText</item>
+        <item name="buttonBarPositiveButtonStyle">@style/MaterialAlertDialogButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/MaterialAlertDialogButton</item>
+    </style>
+
+    <style name="MaterialAlertDialogTitle" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="MaterialAlertDialogText" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:ellipsize">none</item>
+    </style>
+
+    <style name="MaterialAlertDialogButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="backgroundTint">@color/primaryBackground</item>
+        <item name="rippleColor">@color/blueTwitter</item>
+    </style>
+</resources>

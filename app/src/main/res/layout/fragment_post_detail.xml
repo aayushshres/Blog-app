@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/general_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryBackground"
+    tools:context=".ui.main.post.postdetail.PostDetailFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/post_detail_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primaryBackground"
+        app:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/post_detail_material_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primaryBackground"
+            app:navigationIcon="@drawable/ic_arrow_left"
+            app:title="Post" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_detail_container_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_detail_app_bar">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/post_detail_image_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/cat_sleep"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_detail_username"
+            style="@style/PostUserName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Username"
+            app:layout_constraintStart_toEndOf="@id/post_detail_image_profile"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/post_detail_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/primaryBackground"
+            android:padding="7dp"
+            android:src="@drawable/ic_options_arrow_down"
+            android:tint="@color/grayLight"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_detail_title"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Title"
+            android:textColor="@color/secondaryText"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@id/post_detail_image_profile"
+            app:layout_constraintTop_toBottomOf="@id/post_detail_username" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_detail_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:maxHeight="300dp"
+            android:padding="10dp"
+            android:scrollbarThumbVertical="@color/blueTwitter"
+            android:scrollbars="vertical"
+            android:text="Text from user!"
+            android:textColor="@color/primaryText"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_detail_title" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_detail_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="date null"
+            android:textColor="@color/grayLight"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_detail_text"
+            app:layout_constraintWidth_percent="0.85" />
+
+        <View
+            android:id="@+id/post_detail_top_divider"
+            style="@style/Divider"
+            android:layout_width="0dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_detail_date"
+            app:layout_constraintWidth_percent="0.95" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_detail_reposts"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="Reposts"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_detail_top_divider" />
+
+        <ImageView
+            android:id="@+id/post_detail_comment_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/ic_comment"
+            android:backgroundTint="@color/grayLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_top_divider" />
+
+
+        <ImageView
+            android:id="@+id/post_detail_heart_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_heart"
+            android:backgroundTint="@color/grayLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/post_detail_top_divider" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_detail_heart_number"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="0"
+            android:textColor="@color/primaryText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/post_detail_heart_text"
+            app:layout_constraintTop_toBottomOf="@id/post_detail_top_divider" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_detail_heart_text"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="5dp"
+            android:text="Likes"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_detail_top_divider"
+            app:layout_constraintWidth_percent="0.107" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_post_detail_comments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbarSize="1dp"
+        android:scrollbarThumbVertical="@color/blueTwitter"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/post_detail_container_reply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_detail_container_post" />
+
+    <ProgressBar
+        android:id="@+id/post_detail_comments_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/blueTwitter"
+        app:layout_constraintBottom_toTopOf="@id/post_detail_container_reply"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_detail_container_post" />
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/post_detail_motion_layout_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="3dp"
+        android:visibility="gone"
+        app:layoutDescription="@xml/fragment_post_detail_motion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/post_detail_container_options"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/profile_edit_button_selector"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/post_detail_motion_swipe"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_line"
+                android:tint="@color/grayLight"
+                app:layout_constraintBottom_toTopOf="@id/post_detail_options_list"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.10" />
+
+            <ListView
+                android:id="@+id/post_detail_options_list"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/primaryBackground"
+                android:scrollbars="none"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/post_detail_motion_swipe" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_detail_container_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryBackground"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_detail_textview_reply_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You are replying to "
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/post_detail_edittext_reply"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/post_detail_textview_username_reply_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textColor="@color/blueTwitter"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/post_detail_edittext_reply"
+            app:layout_constraintStart_toEndOf="@id/post_detail_textview_reply_text"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/post_detail_edittext_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/background_tint_gray_blue_normal"
+            android:hint="Write your reply here!"
+            android:inputType="textMultiLine"
+            android:maxHeight="60dp"
+            android:maxLength="200"
+            android:textColor="@color/primaryText"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/post_detail_button_reply"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/post_detail_button_reply"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/primaryIcon"
+            android:gravity="center"
+            android:text="reply"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <ProgressBar
+            android:id="@+id/post_detail_sending_reply_progressbar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:indeterminateTint="@color/secondaryIcon"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/post_detail_button_reply"
+            app:layout_constraintTop_toBottomOf="@id/post_detail_edittext_reply" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_view_background_opaque"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_opaque"
+        android:elevation="2dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/post_detail_background_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primaryBackground"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/blueTwitter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

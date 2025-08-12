@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="primaryBackground">@color/darkBlue</color>
+    <color name="primaryBackgroundTransparency">@color/darkBlueTransparency</color>
+    <color name="searchBackground">@color/white</color>
+
+    <color name="primaryText">@color/white</color>
+    <color name="secondaryText">@color/grayLightText</color>
+
+    <color name="options">@color/grayLight</color>
+
+    <color name="primaryIcon">@color/blueTwitter</color>
+    <color name="secondaryIcon">@color/grayLight</color>
+
+    <color name="bottomLineDividerNavigation">@color/grayDark</color>
+    <color name="searchSelectorBackgroundFalse">@color/grayDark</color>
+    <color name="searchSelectorBackgroundTrue">@color/primaryBackground</color>
+
+    <color name="bottomNavigationFalse">@color/grayLightText</color>
+    <color name="bottomNavigationTrue">@color/blueTwitter</color>
+
+    <!--Color for background drawables login and text-->
+    <color name="grayDark">#343434</color>
+    <color name="grayTest">#404040</color>
+    <color name="grayTest2">#595959</color>
+    <color name="grayLight">#A5A5A5</color>
+
+    <color name="grayLightText">#6E7881</color>
+    <color name="grayLightBottom">#E7ECF0</color>
+
+    <color name="darkBlue">#14242c</color>
+    <color name="darkBlueTransparency">#0014242c</color>
+    <color name="darkBlackBlue">#10171F</color>
+
+    <color name="background_opaque">#CC121B1F</color>
+    <color name="backgroundPressed">@color/darkBlackBlue</color>
+
+    <color name="red">#DC143C</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#a4c639</color>
+
+    <!-- Monochromatic blues color-->
+    <color name="blueDiamond">#BBDFFA</color>
+    <color name="blueJordy">#97BAEC</color>
+    <color name="blueLight">#0EBFE9</color>
+    <color name="blueTwitter">#1DA1F2</color>
+    <color name="blueGray">#6987D5</color>
+    <color name="blueHan">#445BC1</color>
+    <color name="blueDenim">#2C43B8</color>
+    <color name="blueEgyptian">#1727AE</color>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- When post is from the user logged in-->
+    <string-array name="list_post_detail_options_text_if_post_is_created_by_logged_in_user">
+        <item>Edit post</item>
+        <item>Delete post</item>
+    </string-array>
+
+    <array name="list_post_detail_options_icons_if_post_is_created_by_logged_in_user">
+        <item>@drawable/ic_edit</item>
+        <item>@drawable/ic_delete</item>
+    </array>
+
+    <!--    When post is from other user    -->
+    <!--    Text    -->
+    <array name="list_post_detail_options_text_if_post_is_created_by_other_user">
+        <item>Report post</item>
+        <item>@array/list_post_detail_options_text_if_post_is_created_by_other_user_follow</item>
+    </array>
+
+    <string-array name="list_post_detail_options_text_if_post_is_created_by_other_user_follow">
+        <item>Follow</item>
+        <item>Unfollow</item>
+    </string-array>
+
+    <!--    Icons    -->
+    <array name="list_post_detail_options_icons_if_post_is_created_by_other_user">
+        <item>@drawable/ic_report</item>
+        <item>@array/list_post_detail_options_icons_if_post_is_created_by_other_user_follow</item>
+    </array>
+
+    <array name="list_post_detail_options_icons_if_post_is_created_by_other_user_follow">
+        <item>@drawable/ic_follow</item>
+        <item>@drawable/ic_unfollow</item>
+    </array>
+
+
+    <!--    List dialog report    -->
+    <string-array name="list_dialog_report">
+        <item>@string/dialog_spinner_option_spam</item>
+        <item>@string/dialog_spinner_option_harmful</item>
+    </string-array>
+
+    <!--    List settings fragment    -->
+        <!--   Account section   -->
+    <string-array name="list_settings_fragment_account_text">
+        <item>@string/row_list_settings_reports</item>
+        <item>@string/row_list_settings_count_posts</item>
+        <item>@string/row_list_settings_delete_account</item>
+    </string-array>
+
+    <array name="list_settings_fragment_account_icons">
+        <item>@drawable/ic_report</item>
+        <item>@drawable/ic_event_note_black_18dp</item>
+        <item>@drawable/ic_delete</item>
+    </array>
+
+    <!--   Other options section   -->
+    <array name="list_settings_fragment_other_options_icons">
+        <item>@drawable/ic_preferences</item>
+    </array>
+
+    <array name="list_settings_fragment_other_options_text">
+        <item>@string/row_list_settings_preferences</item>
+    </array>
+
+
+</resources>
